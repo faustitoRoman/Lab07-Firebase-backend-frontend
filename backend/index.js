@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, query, where, addDoc, updateDoc, doc, deleteDoc} from 'firebase/firestore/lite';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAfgZapuH9yyp80GLHSPzMQeO4s9HdJiMs",
-    authDomain: "studentapp-b2635.firebaseapp.com",
-    projectId: "studentapp-b2635",
-    storageBucket: "studentapp-b2635.appspot.com",
-    messagingSenderId: "420315321187",
-    appId: "1:420315321187:web:a2efc05d258876ecbd3956"
+    apiKey: "AIzaSyAFA5yv1K8OuZlwg1rKHypKIQs9-NETfnk",
+    authDomain: "studentproject-1e030.firebaseapp.com",
+    projectId: "studentproject-1e030",
+    storageBucket: "studentproject-1e030.appspot.com",
+    messagingSenderId: "744173918795",
+    appId: "1:744173918795:web:ff1728c03dea8738fd4bce"
 };
 
 const fb = initializeApp(firebaseConfig);
@@ -107,9 +107,8 @@ app.post("/api/create", (req, res) => {
 app.put("/api/update/:item_id", (req, res) => {
     (async () => {
       try {
-        console.log(req.params.item_id);
         const studentDocumentId = doc(db, "students", req.params.item_id);
-        await updateDoc(studentDocumentId, req.body.student);
+        await updateDoc(studentDocumentId, req.body);
         return res.status(200).send();
       } catch (error) {
         console.log(error);
@@ -121,7 +120,7 @@ app.put("/api/update/:item_id", (req, res) => {
   //delete
   app.delete("/api/delete/:item_id", (req, res) => {
     (async () => {
-      try {       
+      try {
         await deleteDoc(doc(db, "students", req.params.item_id));
         return res.status(200).send();
       } catch (error) {
