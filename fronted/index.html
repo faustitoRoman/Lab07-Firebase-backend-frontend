@@ -3,34 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Admin</title>
+    <title>Lab07-Firebase-backend-frontend</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <form id="agregarAlumno">
         <fieldset>
-            <legend>Informacion Nuevo Estudiante</legend>
+            <legend>Info Estudiante</legend>
             <label for="ID">ID</label>
             <input type="number" id="ID" required><br>
 
-            <label for="name">Name</label>
+            <label for="name">Nombre</label>
             <input type="text" id="name" required><br>
 
-            <label for="age">Age</label>
+            <label for="age">Edad</label>
             <input type="number" id="age" min="0" required><br>
 
-            <label for="grade">Grade</label>
+            <label for="grade">Nota</label>
             <input type="text" id="grade" required><br>
-            <input type="submit" value="Add Student">
+            <input type="submit" value="Agregar Estudiante">
+        </fieldset>
+    </form>
+    <form id="borrarRegistro">
+        <fieldset>
+            <legend>Eliminar a un estudiante registrado</legend>
+            <label for="registerCode">Codigo de registro del estudiante</label>
+            <input type="text" id="registerCode" required><br>
+            <input type="submit" value="Eliminar registro">
+        </fieldset>
+    </form>
+    <form id="actualizarAlumno">
+        <fieldset>
+            <input type="submit" value="Actualizar Informacion Estudiante">
         </fieldset>
     </form>
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Grade</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Nota</th>
             </tr>
         </thead>
         <tbody id="studentList">

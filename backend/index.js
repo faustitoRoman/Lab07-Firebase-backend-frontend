@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, query, where, addDoc, updateDoc, doc, deleteDoc} from 'firebase/firestore/lite';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAFA5yv1K8OuZlwg1rKHypKIQs9-NETfnk",
-    authDomain: "studentproject-1e030.firebaseapp.com",
-    projectId: "studentproject-1e030",
-    storageBucket: "studentproject-1e030.appspot.com",
-    messagingSenderId: "744173918795",
-    appId: "1:744173918795:web:ff1728c03dea8738fd4bce"
+    apiKey: "AIzaSyAfgZapuH9yyp80GLHSPzMQeO4s9HdJiMs",
+    authDomain: "studentapp-b2635.firebaseapp.com",
+    projectId: "studentapp-b2635",
+    storageBucket: "studentapp-b2635.appspot.com",
+    messagingSenderId: "420315321187",
+    appId: "1:420315321187:web:a2efc05d258876ecbd3956"
 };
 
 const fb = initializeApp(firebaseConfig);
