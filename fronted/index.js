@@ -1,4 +1,3 @@
-//const axios = require("axios");
 
 document.addEventListener("DOMContentLoaded", readAllStudents);
 
@@ -56,14 +55,3 @@ async function addStudent(event){
         console.error('Error al agregar el estudiante:', error);
     }
 }
-
-/*function deleteStudent(){
-    axios.get("http://localhost:3000/api/delete")
-    .then(function (response){
-
-    })
-    .catch(function (error){
-        console.log(error);
-    })
-    .finally(function (){});
-}*/
